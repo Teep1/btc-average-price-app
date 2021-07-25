@@ -54,7 +54,7 @@ const App = () => {
   return (
 
     <div className="bitcoin-app" >
-      <h5>Bitcoin's average price: </h5>
+      <h5>BITCOIN'S AVERAGE PRICE: </h5>
       <div>
        <b><h1><NumberFormat value={avg.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h1></b>
         <form onSubmit={handleSubmit}>
