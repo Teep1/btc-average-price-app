@@ -24,8 +24,8 @@ function convertDate(date){
 
 const App = () => {
 
-  const [start, setStart] = useState(1627111000);
-  const [end, setEnd] = useState(1627151260);
+  const [start, setStart] = useState(1626480000);
+  const [end, setEnd] = useState(1627084800);
   const [totalData, setData] = useState([]);
   const [avg, setAvg] = useState(35000);
 
@@ -35,7 +35,6 @@ const App = () => {
     .then(res => {
       setData(res.data);
       console.log(res.data);  
-      //setAvg(calcAvgPrice(totalData))
     }).catch(error => alert('Somethings gone wrong'))
   }, [start, end]);
 
@@ -68,12 +67,8 @@ const App = () => {
 
       </div>
     </div>
-
     );
-
 }
-
-
 
 export default App;
 
