@@ -57,7 +57,7 @@ const App = () => {
     <div className="bitcoin-app" >
       <h5>Bitcoin's average price: </h5>
       <div>
-        <h1 styl><NumberFormat value={avg.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h1>
+       <b><h1><NumberFormat value={avg.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h1></b>
         <form onSubmit={handleSubmit}>
           From: <input type="date" name="from" onChange={e => setStart(convertDate(e.target.value))}/>
           To: <input type="date" name="To" onChange={e => setEnd(convertDate(e.target.value))}/>
