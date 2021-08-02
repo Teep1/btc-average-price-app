@@ -24,8 +24,8 @@ function convertDate(date){
 
 const App = () => {
 
-  const [start, setStart] = useState(1627111000);
-  const [end, setEnd] = useState(1627151260);
+  const [start, setStart] = useState(1626480000);
+  const [end, setEnd] = useState(1627084800);
   const [totalData, setData] = useState([]);
   const [avg, setAvg] = useState(35000);
 
@@ -35,7 +35,6 @@ const App = () => {
     .then(res => {
       setData(res.data);
       console.log(res.data);  
-      //setAvg(calcAvgPrice(totalData))
     }).catch(error => alert('Somethings gone wrong'))
   }, [start, end]);
 
@@ -55,9 +54,9 @@ const App = () => {
   return (
 
     <div className="bitcoin-app" >
-      <h5>Bitcoin's average price: </h5>
+      <h5>BITCOIN'S AVERAGE PRICE: </h5>
       <div>
-        <h1 styl><NumberFormat value={avg.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h1>
+       <b><h1><NumberFormat value={avg.toFixed(2)} displayType={'text'} thousandSeparator={true} prefix={'$'} /></h1></b>
         <form onSubmit={handleSubmit}>
           From: <input type="date" name="from" onChange={e => setStart(convertDate(e.target.value))}/>
           To: <input type="date" name="To" onChange={e => setEnd(convertDate(e.target.value))}/>
@@ -68,12 +67,8 @@ const App = () => {
 
       </div>
     </div>
-
     );
-
 }
-
-
 
 export default App;
 
